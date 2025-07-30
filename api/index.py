@@ -11,7 +11,7 @@ CORS(app)
 
 @app.route('/')
 def home():
-    return 'https://github.com/canonheart/fake_useragnet_api'
+    return 'https://github.com/canonheart/fake_useragent_api'
 
 
 @app.route('/user-agent')
