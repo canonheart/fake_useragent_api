@@ -14,7 +14,7 @@ def home():
     return 'https://github.com/canonheart/fake_useragent_api'
 
 
-@app.route('/user-agent')
+@app.route('/get')
 def user_agent():
     browser = request.args.get('browser')
     browsers = request.args.getlist('browsers')
