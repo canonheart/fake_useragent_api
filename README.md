@@ -1,28 +1,29 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+# Fake Useragent API
+API wrapper for https://github.com/fake-useragent/fake-useragent
 
-# Flask + Vercel
+<br>
 
-This example shows how to use Flask 3 on Vercel with Serverless Functions using the [Python Runtime](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python).
+## Usage
+```python
+# Random
+import requests
 
-## Demo
-
-https://flask-python-template.vercel.app/
-
-## How it Works
-
-This example uses the Web Server Gateway Interface (WSGI) with Flask to enable handling requests on Vercel with Serverless Functions.
-
-## Running Locally
-
-```bash
-npm i -g vercel
-vercel dev
+res = requests.get('https://fake-useragent-api.vercel.app/get')
+print(res.text)
 ```
+### Queris
+##### browser
+`"Google", "Chrome", "Firefox", "Edge", "Opera", "Safari", "Android", "Yandex Browser", "Samsung Internet", "Opera Mobile", "Mobile Safari", "Firefox Mobile", "Firefox iOS", "Chrome Mobile", "Chrome Mobile iOS", "Mobile Safari UI/WKWebView", "Edge Mobile", "DuckDuckGo Mobile", "MiuiBrowser", "Whale", "Twitter", "Facebook", "Amazon Silk"`<br><br>
+If you want to set up multiple browsers together, use `browsers`<br>
+ex: `https://fake-useragent-api.vercel.app/get?browsers=chrome&browsers=firefox`
 
-Your Flask application is now available at `http://localhost:3000`.
+#### os
+`"Windows", "Linux", "Ubuntu", "Chrome OS", "Mac OS X", "Android", "iOS"`
 
-## One-Click Deploy
+#### platforms
+`"desktop", "mobile", "tablet"`
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+<br>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+## Get Your Own
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/import?repository-name=fake_useragent_api&s=https%3A%2F%2Fgithub.com%2Fcanonheart%2Ffake_useragent_api%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
